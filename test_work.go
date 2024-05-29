@@ -59,7 +59,7 @@ func ReverseRunes(s string) string {
 	return string(r)
 }
 
-func print_vars() {
+func print_vars(bool_1, bool_2, bool_3 int) {
 	fmt.Println(bool_1, bool_2, bool_3)
 }
 
