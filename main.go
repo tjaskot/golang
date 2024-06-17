@@ -4,38 +4,39 @@ import (
 	"errors"
 	"fmt"
 	"math"
+	"rsc.io/quote"
 
 	"golang.org/x/example/hello/reverse"
 )
 
-var bool_1, bool_2, bool_3 bool
+var bool1, bool2, bool3 bool
 
 func main() {
-	// fmt.Println("Hello, World!")
-	// fmt.Println(quote.Glass())
-	// fmt.Println(quote.Go())
-	// fmt.Println(quote.Hello())
-	// fmt.Println(quote.Opt())
+	fmt.Println("Hello, World!")
+	fmt.Println(quote.Glass())
+	fmt.Println(quote.Go())
+	fmt.Println(quote.Hello())
+	fmt.Println(quote.Opt())
 
-	// Hello("watup")
-	// Public_call()
-	// show_erur_name, show_erur := private_error("no name?")
-	// fmt.Println(show_erur_name, show_erur)
-	// show_rev("wazzup")
-	// fmt.Println(Int(321))
+	Hello("watup")
+	Public_call()
+	showErurName, showErur := privateError("no name?")
+	fmt.Println(showErurName, showErur)
+	showRev("wazzup")
+	fmt.Println(Int(321))
 	fmt.Println(ReverseRunes("test"))
-	print_vars(1, 2, 3)
+	printVars(1, 2, 3)
 	fmt.Println(math.Sqrt(math.Abs(-7)))
 	a, b := swap("foo", "bar")
 	fmt.Println(a, b)
 }
 
 func Hello(name string) string {
-	ret_mes := fmt.Sprintf("Hi, %v. Welcome!", name)
-	return ret_mes
+	retMes := fmt.Sprintf("Hi, %v. Welcome!", name)
+	return retMes
 }
 
-func private_error(erur string) (string, error) {
+func privateError(erur string) (string, error) {
 	if erur == "" {
 		return "", errors.New("not a valid name")
 	}
@@ -44,7 +45,7 @@ func private_error(erur string) (string, error) {
 	return meswage, nil
 }
 
-func show_rev(rev_str string) {
+func showRev(rev_str string) {
 	fmt.Println(reverse.String(rev_str))
 }
 
@@ -59,15 +60,15 @@ func ReverseRunes(s string) string {
 	return string(r)
 }
 
-func print_vars(bool_1, bool_2, bool_3 int) {
-	fmt.Println(bool_1, bool_2, bool_3)
+func printVars(bool1, bool2, bool3 int) {
+	fmt.Println(bool1, bool2, bool3)
 }
 
 func swap(x, y string) (string, string) { // func swap takes two strings and returns two strings in reverse
 	return y, x
 }
 
-func add_count() {
+func addCount() {
 	sum := 1
 	for sum < 1000 {
 		sum += sum
